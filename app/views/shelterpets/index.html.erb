@@ -1,0 +1,8 @@
+<h1> Our Pets </h1>
+<%= @shelter.name %>
+<% @shelter.pets.each do |pet| %>
+  <p><%= image_tag(pet.image) %></p>
+  <p><%= pet.name %></p>
+  <p><%= pet.age %></p>
+  <p><%= pet.sex %></p>
+<% end %>

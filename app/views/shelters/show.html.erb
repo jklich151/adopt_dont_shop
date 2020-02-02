@@ -1,5 +1,5 @@
 <!-- <a href="/shelters">Shelter Index</a> -->
-
+<center>
 <h1><%= link_to @shelter.name, "/shelters/#{@shelter.id}" %></h1>
 
 <p><%= @shelter.address %></p>
@@ -9,3 +9,5 @@
 
 <%= link_to "Update Shelter", "/shelters/#{@shelter.id}/edit" %>
 <%= link_to "Delete Shelter", "/shelters/#{@shelter.id}", method: :delete %>
+<%= link_to "Our Pets", "/shelters/#{@shelter.id}/pets" %>
+</center>

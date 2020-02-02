@@ -1,6 +1,6 @@
 <!-- <a href="/shelters">Shelter Index</a> -->
 
-<h1><%= @shelter.name %></h1>
+<h1><%= link_to @shelter.name, "/shelters/#{@shelter.id}" %></h1>
 
 <p><%= @shelter.address %></p>
 <p><%= @shelter.city %></p>

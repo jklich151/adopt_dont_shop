@@ -12,7 +12,7 @@ RSpec.describe "pets show page", type: :feature do
                         name: "Athena",
                         description: "lazy",
                         age: "1",
-                        sex: "female",
+                        sex: "Female",
                         adoption_status: "available",
                         shelter: shelter_1)
       pet_2 = Pet.create(image: "https://www.perfectdogbreeds.com/wp-content/uploads/2019/03/Pitbull-Dog.jpg",

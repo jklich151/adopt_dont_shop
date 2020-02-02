@@ -27,5 +27,16 @@ RSpec.describe "shelters show page", type: :feature do
       expect(page).to_not have_content(shelter_2.state)
       expect(page).to_not have_content(shelter_2.zip)
     end
+    it "can click on name and be routed to show" do
+      shelter_1 = Shelter.create(name: "Mike's Shelter",
+                                address: "1331 17th Street",
+                                city: "Denver",
+                                state: "CO",
+                                zip: "80202")
+      visit '/shelters'
+
+      click_link shelter_1.name
+      expect(current_path).to eq("/shelters/#{shelter_1.id}")
+    end
   end
 end

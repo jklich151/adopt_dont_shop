@@ -1,7 +1,11 @@
 <h1> Pet Info </h1>
-  <p><%= image_tag(@pet.image) %></p>
+  <p><%= image_tag(@pet.image, size: "200x300") %></p>
   <p><%= @pet.name %></p>
   <p><%= @pet.description %></p>
   <p><%= @pet.age %></p>
   <p><%= @pet.sex %></p>
   <p><%= @pet.adoption_status %></p>
+  <%= link_to 'Update Pet', "/pets/#{@pet.id}/edit" %>
+  <%= link_to "Delete Pet", "/pets/#{@pet.id}", method: :delete %>
+
+ <a href="/pets/<%= @pet.id %>/edit">Edit</a>

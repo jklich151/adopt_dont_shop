@@ -11,7 +11,7 @@ RSpec.describe "pets index page", type: :feature do
       pet_1 = Pet.create(image: "https://www.humanesociety.org/sites/default/files/styles/1240x698/public/2019/02/dog-451643.jpg?h=bf654dbc&itok=MQGvBmuo" ,
                         name: "Athena",
                         age: "1",
-                        sex: "female",
+                        sex: "Female",
                         shelter: shelter_1)
       pet_2 = Pet.create(image: "https://www.perfectdogbreeds.com/wp-content/uploads/2019/03/Pitbull-Dog.jpg",
                         name: "Odell",

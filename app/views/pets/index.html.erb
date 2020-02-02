@@ -1,8 +1,13 @@
 <h1> All Pets </h1>
 <% @pets.each do |pet| %>
-<p><%= image_tag(pet.image) %></p>
+<section class="grid-pet"id="pet-<%=pet.id%>">
+<p><%= image_tag(pet.image, size: "400x300") %></p>
 <p><%= pet.name %></p>
 <p><%= pet.age %></p>
 <p><%= pet.sex %></p>
 <p><%= pet.shelter.name %></p>
+<%= link_to "Edit", "/pets/#{pet.id}/edit" %>
+<%= link_to "Delete", "/pets/#{pet.id}", method: :delete %>
+</section>
+
 <% end %>

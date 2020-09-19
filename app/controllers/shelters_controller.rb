@@ -11,8 +11,8 @@ class SheltersController < ApplicationController
   end
 
   def update
-    @shelter = Shelter.find(params[:id])
-    @shelter.update(shelter_params)
+    shelter = Shelter.find(params[:id])
+    shelter.update(shelter_params)
     redirect_to '/shelters'
   end
 
@@ -21,7 +21,7 @@ class SheltersController < ApplicationController
   end
 
   def create
-    @shelter = Shelter.create(shelter_params)
+    Shelter.create(shelter_params)
     redirect_to '/shelters'
   end
 
